@@ -6,23 +6,32 @@ import axios from "axios";
 
 function App() {
  const [nasa, setNasa] = useState([]);
+ const [day, setDay] = useState("7");
+
  useEffect(() => {
-   axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-17")
+   axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-${day}`)
    .then((response) => {
      setNasa(response.data)
    }).catch((error) => {
      console.log(error)
    })
- }, [])
- return (
-   <div className="App">
-       <Header />
-       <div>
-         {<NasaGrid media_type ={nasa.media_type} date={nasa.date} title = {nasa.title} explanation={nasa.explanation} src={nasa.url}/> }
-       </div>
+ }, [day]);
 
-   </div>
- );
+
+    return (
+      <div className="App">
+          <Header />
+          <div>
+              <form> 
+                <input  type="text" name="day" placeholder="date ex. 2019/07/15"/> 
+                <input  onClick = {() => setDay()} type="submit" value="submit" />
+                {/* <button onClick = {() => setDay("submit") }>Submit</button> */}
+              </form>
+          </div>
+         
+          {<NasaGrid media_type ={nasa.media_type} date={nasa.date} title = {nasa.title} hdurl = {nasa.hdurl} explanation={nasa.explanation} src={nasa.url}/> }
+      </div>
+    );
 }
 
 export default App;

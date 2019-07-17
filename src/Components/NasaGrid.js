@@ -7,14 +7,14 @@ function NasaGrid(props){
        <>
            <p className="date">{props.date}</p>
 
-           {/* {(props.media_type === "video") */}
+           {(props.media_type === "video") ?
            <iframe width="420" height="315"
            src={props.src}>
            </iframe>
            :
-           {/* <img src = /> */}
-
+           <img src = {props.hdurl} width = "420" height ="315"/>
            }
+
            <p className="title">{props.title}</p>
 
 
