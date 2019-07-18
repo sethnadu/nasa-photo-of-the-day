@@ -70,6 +70,7 @@ const CopyRight = styled.p `
     justify-content: center;
     border: 2px solid #0066b3;
     padding: 10px; 
+    border-radius: 10px;
 
 `;
 
@@ -89,7 +90,11 @@ function NasaGrid(props) {
         <img alt="nasa api " src={props.hdurl} width="420" height="315" />
       )}
        </Media> 
-       <CopyRight>{props.copyright}</CopyRight>  
+       {props.copyright === "" ? (
+         <CopyRight>{props.copyright}</CopyRight> 
+       ) : (
+        <CopyRight>No Copyright</CopyRight> 
+       )} 
         <Info>
         <Title>{props.title}</Title>
         <Explanation>{props.explanation}</Explanation>

@@ -54,7 +54,7 @@ function App() {
           <ButtonDiv>
             <Year   nasa = {nasa} setNasa = {setNasa} year= {year} setYear = {setYear} />
             <Months  nasa = {nasa} setNasa = {setNasa} month = {month} setMonth = {setMonth}/>
-            <Days   nasa = {nasa} setNasa = {setNasa} day = {day} setDay = {setDay}/>
+            <Days  nasa = {nasa} setNasa = {setNasa} day = {day} setDay = {setDay}/>
           </ButtonDiv>
           {<NasaGrid copyright ={nasa.copyright} media_type ={nasa.media_type} date={nasa.date} title = {nasa.title} hdurl = {nasa.hdurl} explanation={nasa.explanation} src={nasa.url}/> }
       </MainContainer>

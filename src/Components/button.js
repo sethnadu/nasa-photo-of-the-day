@@ -84,8 +84,8 @@ export function Year (props) {
         <div>
         <Paragraph>Pick Year:</Paragraph>
         <YearDiv>
-           {years.map(date => {
-               return <ButtonStyleYear onClick ={() => props.setYear(date)}>{date}</ButtonStyleYear>
+           {years.map((date, key) => {
+               return <ButtonStyleYear key = {date} onClick ={() => props.setYear(date)}>{date}</ButtonStyleYear>
            })}
         </YearDiv>
         </div>
@@ -101,8 +101,8 @@ export function Months (props) {
         <Paragraph>Pick Month:</Paragraph>    
         <DayMonthDiv>
         
-           {monthArray.map(date => {
-               return <ButtonStyleDayMonth onClick ={() => props.setMonth(date)}>{date}</ButtonStyleDayMonth>
+           {monthArray.map((date, key) => {
+               return <ButtonStyleDayMonth key = {date} onClick ={() => props.setMonth(date)}>{date}</ButtonStyleDayMonth>
            })}
         </DayMonthDiv>
         </div>
@@ -112,7 +112,7 @@ export function Months (props) {
 
 
 
-export function Days (props, key) {
+export function Days (props) {
     const dayOnes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", 
     "18", "19", "20", "21", "22", "23", "24", "25", "26" ,"27" ,"28", "29", "30", "31"];
 
@@ -120,8 +120,8 @@ export function Days (props, key) {
         <div>
         <Paragraph>Pick Day:</Paragraph>
         <DayMonthDiv>
-           {dayOnes.map(date => {
-               return <ButtonStyleDayMonth  onClick ={() => props.setDay(date)}>{date}</ButtonStyleDayMonth>
+           {dayOnes.map((date, key) => {
+               return <ButtonStyleDayMonth key = {date}  onClick ={() => props.setDay(date)}>{date}</ButtonStyleDayMonth>
            })}
            </DayMonthDiv>
         </div>
