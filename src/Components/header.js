@@ -4,7 +4,9 @@ function Header () {
 
     return (
         <div>
-            <h1> Nasa: What happened Today</h1>
+            <img className ="logo" src="https://api.nasa.gov/images/logo.png" alt ="NASA logo" />
+            <h1>On This Day:</h1>
+            <p>Date must be between Jun 16, 1995 and Current Date</p>
         </div>
     )
     

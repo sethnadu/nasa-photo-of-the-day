@@ -6,17 +6,16 @@ function NasaGrid(props){
    return(
        <>
            <p className="date">{props.date}</p>
+            <p className="title">{props.title}</p>
 
            {(props.media_type === "video") ?
-           <iframe width="420" height="315"
+           <iframe title ="content" width="420" height="315"
            src={props.src}>
            </iframe>
            :
-           <img src = {props.hdurl} width = "420" height ="315"/>
+           <img alt = "nasa api " src = {props.hdurl} width = "420" height ="315"/>
            }
-
-           <p className="title">{props.title}</p>
-
+           <p className="copyright">{props.copyright}</p>
 
            <p className="explanation">{props.explanation}</p>
 
