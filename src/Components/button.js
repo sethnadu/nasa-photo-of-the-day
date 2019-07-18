@@ -64,9 +64,10 @@ const ButtonStyleYear = styled.div `
     }
 `;
 
-const Paragraph = styled.div `
+const Paragraph = styled.p `
     font-size: 1.6rem;
-
+    color: white;
+    
 `
 
 

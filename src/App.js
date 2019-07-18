@@ -11,6 +11,10 @@ import axios from "axios";
 
 const MainContainer = styled.div `
  text-align: center;
+ background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=827&q=80");
+ background-size: cover;
+ height: 100%;
+
 `;
 
 const ButtonDiv = styled.div `
