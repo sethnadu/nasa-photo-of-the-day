@@ -90,11 +90,11 @@ function NasaGrid(props) {
         <img alt="nasa api " src={props.hdurl} width="420" height="315" />
       )}
        </Media> 
-       {props.copyright === "" ? (
-         <CopyRight>{props.copyright}</CopyRight> 
-       ) : (
-        <CopyRight>No Copyright</CopyRight> 
-       )} 
+       {!props.copyright ? 
+         <CopyRight>No Copyright</CopyRight> 
+        : 
+        <CopyRight>{props.copyright}</CopyRight> 
+       } 
         <Info>
         <Title>{props.title}</Title>
         <Explanation>{props.explanation}</Explanation>
